@@ -36,6 +36,7 @@ export class Service{
          }
     }
 
+
     async createPost({title,slug, content, featuredImage, status, userId}){
         try{
             return await this.databases.createDocument(
@@ -101,7 +102,8 @@ export class Service{
             return false;
         }
     }
-
+ 
+    
     async deleteFile(fileId){
         try{
             await this.bucket.deleteFile(
